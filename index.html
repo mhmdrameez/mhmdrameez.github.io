@@ -201,6 +201,19 @@
       color: var(--text);
     }
 
+    .btn-resume {
+      border-color: rgba(125, 211, 252, .5);
+      color: #c9f3ff;
+      background: rgba(34, 211, 238, 0.08);
+    }
+
+    .btn-resume:hover,
+    .btn-resume:focus {
+      border-color: rgba(125, 211, 252, .9);
+      color: #e6f9ff;
+      background: rgba(34, 211, 238, 0.15);
+    }
+
     .socials a {
       color: var(--muted);
       font-size: 1.1rem;
@@ -418,6 +431,9 @@
           <div class="hero-actions mt-4 d-flex flex-wrap gap-2">
             <a class="btn btn-brand" href="#projects">View Projects</a>
             <a class="btn btn-outline-light" href="#contact">Contact Me</a>
+            <button class="btn btn-outline-light btn-resume" id="downloadResumeBtn" type="button">
+              <i class="bi bi-download me-1" aria-hidden="true"></i> Download Resume
+            </button>
           </div>
           <div class="socials mt-4 d-flex gap-2">
             <a href="https://github.com/mhmdrameez" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
@@ -759,6 +775,38 @@
     }
 
     loadGitHubProfile();
+
+    // Strict no-navigation download behavior.
+    const resumeBtn = document.getElementById("downloadResumeBtn");
+    if (resumeBtn) {
+      resumeBtn.addEventListener("click", async () => {
+        const resumePath = "assets/Muhammed_Rameez.pdf";
+        const fileName = "Muhammed_Rameez_Resume.pdf";
+
+        if (window.location.protocol === "file:") {
+          alert("Download without page change requires running this page on localhost (http://), not file://.");
+          return;
+        }
+
+        try {
+          const response = await fetch(resumePath, { cache: "no-store" });
+          if (!response.ok) throw new Error("Resume download failed.");
+          const pdfBlob = await response.blob();
+          const blobUrl = URL.createObjectURL(pdfBlob);
+
+          const tempLink = document.createElement("a");
+          tempLink.href = blobUrl;
+          tempLink.download = fileName;
+          tempLink.style.display = "none";
+          document.body.appendChild(tempLink);
+          tempLink.click();
+          tempLink.remove();
+          URL.revokeObjectURL(blobUrl);
+        } catch (error) {
+          console.error("Resume download failed:", error);
+        }
+      });
+    }
   </script>
 </body>
 </html>
