@@ -3,23 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Muhammed Rameez | Full Stack Developer</title>
-  <meta name="description" content="Muhammed Rameez is a Full Stack Developer with 3.7+ years of experience building scalable web applications using React.js, Next.js, Node.js, JavaScript, and MySQL.">
-  <meta name="keywords" content="Muhammed Rameez, Full Stack Developer, React.js, Next.js, Node.js, JavaScript, TypeScript, AngularJS, MySQL, REST API, AWS, CI/CD, Software Engineer">
+  <title>Muhammed Rameez | Interactive Developer Portfolio</title>
+  <meta name="description" content="Game-inspired interactive portfolio of Muhammed Rameez, Full Stack Developer with 3.7+ years of experience.">
+  <meta name="keywords" content="Muhammed Rameez, Full Stack Developer, React, Next.js, Node.js, Portfolio, Software Engineer">
   <meta name="author" content="Muhammed Rameez">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Muhammed Rameez | Full Stack Developer">
-  <meta property="og:description" content="Software Engineer focused on full stack systems, clean APIs, and modern web architecture.">
+  <meta property="og:title" content="Muhammed Rameez | Interactive Developer Portfolio">
+  <meta property="og:description" content="Explore skill tree, project missions, career map, and open-source side quests.">
   <meta property="og:url" content="https://mhmdrameez.github.io/">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/31467986?v=4">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Muhammed Rameez | Full Stack Developer">
-  <meta name="twitter:description" content="3.7+ years building React/Next.js applications and scalable backend APIs.">
-  <meta name="google-site-verification" content="Zath2FevI6dSyQKcJa7r9KWbbNqBUs2EBZ5aYjVUgIY">
   <link rel="canonical" href="https://mhmdrameez.github.io/">
   <link rel="icon" href="assets/img/favicon.png">
-  <link rel="apple-touch-icon" href="assets/img/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,467 +24,142 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #0a0f1a;
-      --bg-soft: #10182a;
-      --surface: rgba(255, 255, 255, 0.05);
-      --text: #e7ecf5;
-      --muted: #9aa8c5;
-      --brand: #22d3ee;
-      --brand-2: #3b82f6;
-      --border: rgba(154, 168, 197, 0.2);
-      --shadow: 0 18px 50px rgba(2, 6, 23, 0.45);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Space Grotesk", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(900px 500px at 10% -10%, rgba(34, 211, 238, 0.17), transparent),
-        radial-gradient(900px 500px at 95% 0%, rgba(59, 130, 246, 0.17), transparent),
-        linear-gradient(180deg, #070b14, var(--bg));
-      min-height: 100vh;
-    }
-
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: 1rem;
-      background: #fff;
-      color: #000;
-      padding: .5rem .75rem;
-      z-index: 10000;
-      border-radius: .5rem;
-    }
-
-    .skip-link:focus {
-      left: 1rem;
-    }
-
-    .navbar {
-      backdrop-filter: blur(12px);
-      background: rgba(7, 11, 20, 0.78);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .navbar-brand {
-      font-weight: 700;
-      letter-spacing: .2px;
-    }
-
-    .navbar .nav-link {
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .navbar .nav-link:hover,
-    .navbar .nav-link:focus,
-    .navbar .nav-link.active {
-      color: var(--text);
-    }
-
-    section {
-      padding: 96px 0;
-    }
-
-    .section-title {
-      font-size: clamp(1.7rem, 1.2rem + 1.5vw, 2.4rem);
-      font-weight: 700;
-      margin-bottom: .75rem;
-    }
-
-    .section-subtitle {
-      color: var(--muted);
-      max-width: 740px;
-      margin-bottom: 2rem;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding-top: 120px;
-    }
-
-    .hero::before,
-    .hero::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      filter: blur(8px);
-      opacity: .55;
-      z-index: -1;
-    }
-
-    .hero::before {
-      width: 320px;
-      height: 320px;
-      background: rgba(34, 211, 238, 0.24);
-      left: -90px;
-      top: 70px;
-      animation: driftA 7s ease-in-out infinite;
-    }
-
-    .hero::after {
-      width: 360px;
-      height: 360px;
-      background: rgba(59, 130, 246, 0.2);
-      right: -120px;
-      top: 180px;
-      animation: driftB 8s ease-in-out infinite;
-    }
-
-    @keyframes driftA {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-18px); }
-    }
-
-    @keyframes driftB {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(14px); }
-    }
-
-    .kicker {
-      font-family: "JetBrains Mono", monospace;
-      color: var(--brand);
-      font-size: .92rem;
-      margin-bottom: .8rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.1rem, 1.2rem + 3vw, 4rem);
-      line-height: 1.1;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: clamp(1rem, .9rem + .5vw, 1.15rem);
-      max-width: 660px;
-    }
-
-    .hero-actions .btn {
-      border-radius: 999px;
-      padding: .7rem 1.15rem;
-      font-weight: 600;
-    }
-
-    .btn-brand {
-      color: #061220;
-      background: linear-gradient(90deg, var(--brand), #7dd3fc);
-      border: none;
-    }
-
-    .btn-brand:hover {
-      color: #05131f;
-      filter: brightness(1.03);
-    }
-
-    .btn-outline-light {
-      border-color: var(--border);
-      color: var(--text);
-    }
-
-    .btn-resume {
-      border-color: rgba(125, 211, 252, .5);
-      color: #c9f3ff;
-      background: rgba(34, 211, 238, 0.08);
-    }
-
-    .btn-resume:hover,
-    .btn-resume:focus {
-      border-color: rgba(125, 211, 252, .9);
-      color: #e6f9ff;
-      background: rgba(34, 211, 238, 0.15);
-    }
-
-    .socials a {
-      color: var(--muted);
-      font-size: 1.1rem;
-      border: 1px solid var(--border);
-      width: 40px;
-      height: 40px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      transition: all .2s ease;
-      text-decoration: none;
-    }
-
-    .socials a:hover,
-    .socials a:focus {
-      color: var(--text);
-      border-color: rgba(125, 211, 252, .7);
-      transform: translateY(-2px);
-    }
-
-    .glass-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card {
-      padding: 1.25rem;
-    }
-
-    .hero-card .metric {
-      font-size: 1.7rem;
-      font-weight: 700;
-      margin-bottom: .2rem;
-    }
-
-    .hero-card .label {
-      color: var(--muted);
-      font-size: .92rem;
-    }
-
-    .chip {
-      display: inline-flex;
-      padding: .42rem .72rem;
-      background: rgba(125, 211, 252, 0.1);
-      border: 1px solid rgba(125, 211, 252, 0.3);
-      color: #bdeffd;
-      border-radius: 999px;
-      margin: .3rem;
-      font-size: .9rem;
-      font-weight: 500;
-    }
-
-    .project-card {
-      height: 100%;
-      padding: 1.2rem;
-      transition: transform .25s ease, border-color .25s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(125, 211, 252, 0.6);
-    }
-
-    .project-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: .75rem;
-    }
-
-    .project-tags span {
-      font-family: "JetBrains Mono", monospace;
-      font-size: .76rem;
-      color: #c5eefe;
-      background: rgba(59, 130, 246, 0.15);
-      border: 1px solid rgba(59, 130, 246, 0.35);
-      border-radius: 6px;
-      padding: .2rem .45rem;
-      display: inline-block;
-      margin: .22rem .22rem 0 0;
-    }
-
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: .35rem;
-      margin-top: .9rem;
-      font-size: .84rem;
-      text-decoration: none;
-      color: #c9f3ff;
-      border: 1px solid rgba(125, 211, 252, .45);
-      background: rgba(34, 211, 238, 0.08);
-      border-radius: 999px;
-      padding: .3rem .7rem;
-    }
-
-    .project-link:hover,
-    .project-link:focus {
-      color: #e6fbff;
-      border-color: rgba(125, 211, 252, .85);
-      background: rgba(34, 211, 238, 0.16);
-    }
-
-    .timeline {
-      border-left: 2px solid rgba(125, 211, 252, 0.35);
-      padding-left: 1rem;
-      margin-left: .25rem;
-    }
-
-    .timeline-item {
-      margin-bottom: 1.1rem;
-      position: relative;
-    }
-
-    .timeline-item::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--brand);
-      position: absolute;
-      left: -1.38rem;
-      top: .46rem;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .contact-card {
-      padding: 1rem;
-      height: 100%;
-    }
-
-    .contact-card a {
-      color: #bdeffd;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .contact-card a:hover,
-    .contact-card a:focus {
-      color: #d8f6ff;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(14px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    footer {
-      padding: 2rem 0 2.5rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-    }
-
-    @media (max-width: 991.98px) {
-      section {
-        padding: 76px 0;
-      }
-
-      .hero {
-        min-height: auto;
-        padding-top: 115px;
-      }
-    }
+    :root { --bg:#070d16; --surface:rgba(255,255,255,.05); --text:#e8edf8; --muted:#9aa8c5; --brand:#22d3ee; --brand2:#3b82f6; --border:rgba(154,168,197,.25); --shadow:0 20px 50px rgba(2,8,20,.55); }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family:"Space Grotesk",sans-serif; color:var(--text); background:radial-gradient(1000px 500px at 0% -10%, rgba(34,211,238,.18), transparent), radial-gradient(900px 550px at 100% 0%, rgba(59,130,246,.16), transparent), linear-gradient(180deg,#050913,var(--bg)); min-height:100vh; overflow-x:hidden; }
+    .skip-link { position:absolute; left:-9999px; top:1rem; background:#fff; color:#000; padding:.55rem .8rem; border-radius:.5rem; z-index:9999; }
+    .skip-link:focus { left:1rem; }
+    .navbar { backdrop-filter: blur(10px); background: rgba(5,9,18,.8); border-bottom:1px solid var(--border); }
+    .navbar .nav-link { color:var(--muted); }
+    .navbar .nav-link:hover, .navbar .nav-link.active { color:var(--text); }
+    .journey-hud { position:fixed; top:64px; left:0; right:0; z-index:1020; background:rgba(10,16,28,.8); border-bottom:1px solid var(--border); padding:.45rem 0; }
+    .progress { height:.56rem; background:rgba(154,168,197,.18); }
+    .progress-bar { background:linear-gradient(90deg,#22d3ee,#3b82f6); box-shadow:0 0 14px rgba(34,211,238,.45); }
+    section { padding:96px 0; position:relative; }
+    .section-shell { position:relative; }
+    .level-tag { position:absolute; right:.5rem; top:-.35rem; padding:.28rem .6rem; border-radius:999px; border:1px solid var(--border); background:rgba(10,18,33,.9); font-size:.72rem; }
+    .level-tag .status { color:#fca5a5; font-weight:700; }
+    .section-shell.unlocked .level-tag { border-color:rgba(52,211,153,.5); background:rgba(6,28,24,.92); }
+    .section-shell.unlocked .level-tag .status { color:#6ee7b7; }
+    .section-title { font-size:clamp(1.75rem, 1.2rem + 2vw, 2.45rem); font-weight:700; margin-bottom:.75rem; }
+    .section-subtitle { max-width:800px; color:var(--muted); margin-bottom:2rem; }
+    .glass { background:var(--surface); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow); }
+    .hero { min-height:100vh; padding-top:150px; overflow:hidden; }
+    .code-bg { position:absolute; inset:0; pointer-events:none; opacity:.24; overflow:hidden; }
+    .code-line { position:absolute; font-family:"JetBrains Mono",monospace; font-size:.85rem; color:#7dd3fc; animation:floatCode linear infinite; white-space:nowrap; }
+    @keyframes floatCode { from { transform:translateY(110vh);} to { transform:translateY(-20vh);} }
+    .floating-icon { position:absolute; font-size:2.1rem; color:rgba(125,211,252,.7); animation:bob 4s ease-in-out infinite; pointer-events:none; }
+    .floating-icon.i1 { top:16%; left:8%; }
+    .floating-icon.i2 { top:22%; right:11%; animation-delay:1s; }
+    .floating-icon.i3 { top:65%; right:5%; animation-delay:1.5s; }
+    @keyframes bob { 0%,100% { transform:translateY(0);} 50% { transform:translateY(-12px);} }
+    .kicker { font-family:"JetBrains Mono",monospace; color:var(--brand); font-size:.92rem; }
+    .hero h1 { font-size:clamp(2.2rem, 1.2rem + 3vw, 4rem); line-height:1.08; margin-bottom:.8rem; }
+    .typing-role { color:#bfdbfe; font-family:"JetBrains Mono",monospace; min-height:24px; margin-bottom:1rem; }
+    .hero p { max-width:680px; color:var(--muted); }
+    .hero-actions .btn { border-radius:999px; padding:.65rem 1.1rem; font-weight:600; }
+    .btn-brand { color:#021525; border:none; background:linear-gradient(90deg,#22d3ee,#7dd3fc); }
+    .btn-outline-light { border-color:var(--border); color:var(--text); }
+    .btn-resume { border-color:rgba(125,211,252,.55); color:#d2f6ff; background:rgba(34,211,238,.1); }
+    .socials a { width:40px; height:40px; border-radius:10px; border:1px solid var(--border); display:inline-flex; align-items:center; justify-content:center; color:var(--muted); text-decoration:none; }
+    .socials a:hover { color:var(--text); border-color:rgba(125,211,252,.8); transform:translateY(-2px); }
+    .xp-card { padding:1.1rem; }
+    .xp-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.85rem; }
+    .xp-item { padding:.65rem; border:1px solid rgba(125,211,252,.23); border-radius:12px; background:rgba(34,211,238,.05); }
+    .xp-item .value { font-size:1.35rem; font-weight:700; }
+    .xp-item .label { font-size:.8rem; color:var(--muted); }
+    .fade-in { opacity:0; transform:translateY(18px); transition:opacity .65s ease, transform .65s ease; }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
+    .skill-tree { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+    .tree-box { padding:1rem; border-radius:14px; border:1px solid var(--border); background:rgba(10,20,35,.72); }
+    .tree-title { font-size:.98rem; margin-bottom:.75rem; font-weight:700; }
+    .skill-node { display:block; width:100%; text-align:left; margin-bottom:.6rem; padding:.62rem .7rem; border-radius:10px; border:1px solid rgba(125,211,252,.25); background:rgba(34,211,238,.06); color:#dff4ff; font-family:"JetBrains Mono",monospace; font-size:.82rem; }
+    .skill-node:hover { border-color:rgba(125,211,252,.75); box-shadow:0 0 18px rgba(34,211,238,.18); }
+    .mission-card { height:100%; padding:1.1rem; border-radius:16px; border:1px solid var(--border); background:rgba(13,23,40,.82); transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+    .mission-card:hover { transform:translateY(-6px); border-color:rgba(125,211,252,.72); box-shadow:0 0 24px rgba(59,130,246,.18); }
+    .mission-tags span { display:inline-block; font-size:.74rem; font-family:"JetBrains Mono",monospace; padding:.2rem .4rem; margin:.18rem .18rem 0 0; border-radius:6px; color:#cceeff; border:1px solid rgba(125,211,252,.35); background:rgba(59,130,246,.13); }
+    .map-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+    .map-node { padding:.9rem; border-radius:14px; border:1px solid var(--border); background:rgba(10,18,31,.86); }
+    .node-level { font-family:"JetBrains Mono",monospace; font-size:.76rem; color:#8dd7ff; margin-bottom:.32rem; }
+    .quest-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.8rem; }
+    .quest-card { padding:.8rem; border-radius:12px; border:1px solid var(--border); background:rgba(8,16,30,.85); }
+    .quest-card .v { font-size:1.24rem; font-weight:700; }
+    .quest-card .k { color:var(--muted); font-size:.8rem; }
+    .contrib-img { width:100%; border-radius:12px; border:1px solid var(--border); background:rgba(7,13,26,.8); }
+    .contact-card { height:100%; padding:.95rem; }
+    .contact-card a { color:#caefff; text-decoration:none; font-weight:600; word-break:break-word; }
+    .modal-content { background:#0b1426; border:1px solid var(--border); color:var(--text); }
+    .modal-header,.modal-footer { border-color:var(--border); }
+    .muted { color:var(--muted); }
+    @media (max-width:991.98px) { .journey-hud{top:57px;} .hero{min-height:auto; padding-top:132px;} .skill-tree,.map-grid{grid-template-columns:1fr;} .quest-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
   </style>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Muhammed Rameez",
-      "jobTitle": "Software Engineer",
-      "description": "Full Stack Developer with 3.7+ years of experience in React.js, Next.js, Node.js, JavaScript, and MySQL.",
-      "url": "https://mhmdrameez.github.io/",
-      "sameAs": [
-        "https://github.com/mhmdrameez",
-        "https://www.linkedin.com/in/mhmdrameeznettoor/"
-      ],
-      "knowsAbout": [
-        "JavaScript",
-        "TypeScript",
-        "React.js",
-        "AngularJS",
-        "Node.js",
-        "Next.js",
-        "MySQL",
-        "REST API",
-        "AWS",
-        "CI/CD"
-      ]
-    }
-  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
-
   <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand text-white" href="#home">Muhammed Rameez</a>
-      <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="bi bi-list fs-2"></i>
       </button>
       <div class="collapse navbar-collapse" id="siteNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#home">Level 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Level 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Level 3</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Level 4</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Level 5</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header id="home" class="hero">
+  <div class="journey-hud">
     <div class="container">
+      <div class="small mb-1">Developer Journey Progress <span id="progressText" class="muted">0%</span></div>
+      <div class="progress" role="progressbar" aria-label="Developer Journey Progress"><div class="progress-bar" id="journeyBar" style="width:0%"></div></div>
+    </div>
+  </div>
+
+  <header id="home" class="hero section-shell unlocked" data-level="1">
+    <div class="level-tag">LEVEL 1 <span class="status">UNLOCKED</span></div>
+    <div class="code-bg" aria-hidden="true">
+      <span class="code-line" style="left:6%; animation-duration:22s;">const performance = optimize(app);</span>
+      <span class="code-line" style="left:26%; animation-duration:25s;">router.get('/api/projects', auth, handler)</span>
+      <span class="code-line" style="left:54%; animation-duration:19s;">deploy --env=prod --ci</span>
+      <span class="code-line" style="left:74%; animation-duration:24s;">if (latency &gt; 200) refactor()</span>
+    </div>
+    <i class="bi bi-bootstrap-reboot floating-icon i1"></i>
+    <i class="bi bi-diagram-3 floating-icon i2"></i>
+    <i class="bi bi-cloud-arrow-up floating-icon i3"></i>
+    <div class="container position-relative">
       <div class="row g-4 align-items-center">
         <div class="col-lg-7">
-          <p class="kicker mb-2">Full Stack Developer | React & Node.js</p>
+          <p class="kicker">Developer Journey Game: Start</p>
           <h1>Muhammed Rameez</h1>
-          <p>
-            Full Stack Developer with 3.7+ years of experience building web applications using React.js, Next.js, Node.js,
-            and modern JavaScript technologies. Experienced in scalable APIs, responsive UI systems, performance
-            optimization, and CI/CD-based deployments.
-          </p>
+          <p class="typing-role" id="typingRole" aria-live="polite"></p>
+          <p>Full Stack Developer with 3.7+ years of experience building web applications using React.js, Next.js, Node.js, and modern JavaScript technologies. Experienced in scalable APIs, responsive UI systems, performance optimization, and CI/CD-based deployments.</p>
           <div class="hero-actions mt-4 d-flex flex-wrap gap-2">
-            <a class="btn btn-brand" href="#projects">View Projects</a>
-            <a class="btn btn-outline-light" href="#contact">Contact Me</a>
-            <button class="btn btn-outline-light btn-resume" id="downloadResumeBtn" type="button">
-              <i class="bi bi-download me-1" aria-hidden="true"></i> Download Resume
-            </button>
+            <a class="btn btn-brand" href="#projects">Play Missions</a>
+            <a class="btn btn-outline-light" href="#contact">Contact Recruiter Mode</a>
+            <button class="btn btn-outline-light btn-resume" id="downloadResumeBtn" type="button"><i class="bi bi-download me-1" aria-hidden="true"></i> Download Resume</button>
           </div>
           <div class="socials mt-4 d-flex gap-2">
-            <a href="https://github.com/mhmdrameez" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-              <i class="bi bi-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/mhmdrameeznettoor/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-              <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="mailto:muhammedrameez2000@gmail.com" aria-label="Email Muhammed Rameez">
-              <i class="bi bi-envelope"></i>
-            </a>
+            <a href="https://github.com/mhmdrameez" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/mhmdrameeznettoor/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:muhammedrameez2000@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
           </div>
         </div>
         <div class="col-lg-5">
-          <aside class="glass-card hero-card fade-in" aria-label="GitHub snapshot">
-            <h2 class="h5 mb-3">GitHub Snapshot</h2>
-            <div class="row g-3 mb-2">
-              <div class="col-6">
-                <div class="metric" id="ghFollowers">--</div>
-                <div class="label">Followers</div>
-              </div>
-              <div class="col-6">
-                <div class="metric" id="ghRepos">--</div>
-                <div class="label">Public Repos</div>
-              </div>
-              <div class="col-6">
-                <div class="metric" id="ghStars">--</div>
-                <div class="label">Total Stars</div>
-              </div>
-              <div class="col-6">
-                <div class="metric">3.7+</div>
-                <div class="label">Years Experience</div>
-              </div>
+          <aside class="glass xp-card fade-in" aria-label="XP stats">
+            <h2 class="h5 mb-3">XP Stats Card</h2>
+            <div class="xp-grid">
+              <div class="xp-item"><div class="value">3.7+</div><div class="label">Years Experience</div></div>
+              <div class="xp-item"><div class="value">8+</div><div class="label">Projects Built</div></div>
+              <div class="xp-item"><div class="value" id="xpRepos">--</div><div class="label">GitHub Repositories</div></div>
+              <div class="xp-item"><div class="value">4+</div><div class="label">Performance Improvements</div></div>
             </div>
-            <small class="muted d-block" id="ghStatus">Loading GitHub profile...</small>
           </aside>
         </div>
       </div>
@@ -497,360 +167,278 @@
   </header>
 
   <main id="main-content">
-    <section id="about" class="fade-in" aria-labelledby="about-title">
+    <section id="about" class="section-shell fade-in" data-level="1">
+      <div class="level-tag">ABOUT <span class="status">UNLOCKED</span></div>
       <div class="container">
-        <h2 id="about-title" class="section-title">About</h2>
-        <p class="section-subtitle">
-          Full Stack Developer and Software Engineer with 3.7+ years of professional experience building production-ready
-          web applications. I work across frontend architecture, backend APIs, and deployment pipelines, with a strong focus
-          on debugging complex systems, performance optimization, and maintainable code delivery in Agile teams.
-        </p>
+        <h2 class="section-title">Level 1: Introduction</h2>
+        <p class="section-subtitle">Full Stack Developer and Software Engineer with 3.7+ years of professional experience building production-ready web applications. I work across frontend architecture, backend APIs, and deployment pipelines, with a strong focus on debugging complex systems, performance optimization, and maintainable code delivery in Agile teams.</p>
       </div>
     </section>
 
-    <section id="skills" class="fade-in" aria-labelledby="skills-title">
+    <section id="skills" class="section-shell fade-in" data-level="2">
+      <div class="level-tag">LEVEL 2 <span class="status">LOCKED</span></div>
       <div class="container">
-        <h2 id="skills-title" class="section-title">Skills</h2>
-        <p class="section-subtitle">Technology stack and engineering practices from production projects.</p>
-        <div class="glass-card p-3 p-md-4">
-          <div class="mb-3">
-            <h3 class="h6 text-uppercase muted">Programming</h3>
-            <span class="chip">JavaScript (ES6+)</span>
-            <span class="chip">TypeScript</span>
-            <span class="chip">HTML5</span>
-            <span class="chip">CSS3</span>
-            <span class="chip">PHP</span>
+        <h2 class="section-title">Level 2: Developer Skill Tree</h2>
+        <p class="section-subtitle">Hover skill nodes to inspect experience level and projects where they were used.</p>
+        <div class="skill-tree">
+          <div class="tree-box">
+            <div class="tree-title">Frontend Tree</div>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Advanced | Used in PetPalz, Build-X, dashboards">React.js</button>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Advanced | Used in LocalShop Finder, SecurePosit, Labor Gator">Next.js</button>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Advanced | Used in Car-Up Admin, NASE">AngularJS / Angular</button>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Intermediate | Used in Build-X">Redux</button>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Advanced | Used in production UIs">Bootstrap / Responsive UI</button>
           </div>
-          <div class="mb-3">
-            <h3 class="h6 text-uppercase muted">Frontend</h3>
-            <span class="chip">React.js</span>
-            <span class="chip">Next.js</span>
-            <span class="chip">AngularJS</span>
-            <span class="chip">Redux</span>
-            <span class="chip">Bootstrap</span>
-            <span class="chip">SASS</span>
-            <span class="chip">Responsive Web Design</span>
+          <div class="tree-box">
+            <div class="tree-title">Backend Tree</div>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Advanced | APIs for NASE, PetPalz, admin systems">Node.js</button>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Advanced | Designed scalable REST APIs">REST APIs</button>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Intermediate | Legacy systems in NASE">CodeIgniter</button>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Intermediate | Service integrations and auth">Service Architecture</button>
           </div>
-          <div class="mb-3">
-            <h3 class="h6 text-uppercase muted">Backend</h3>
-            <span class="chip">Node.js</span>
-            <span class="chip">REST APIs</span>
-            <span class="chip">CodeIgniter</span>
-          </div>
-          <div class="mb-3">
-            <h3 class="h6 text-uppercase muted">Data</h3>
-            <span class="chip">MySQL</span>
-          </div>
-          <div class="mb-3">
-            <h3 class="h6 text-uppercase muted">Tools</h3>
-            <span class="chip">Git</span>
-            <span class="chip">GitHub</span>
-            <span class="chip">Jira</span>
-            <span class="chip">Webpack</span>
-            <span class="chip">Gulp</span>
-          </div>
-          <div class="mb-3">
-            <h3 class="h6 text-uppercase muted">Testing</h3>
-            <span class="chip">Jest</span>
-            <span class="chip">Unit Testing</span>
-            <span class="chip">TDD</span>
-          </div>
-          <div>
-            <h3 class="h6 text-uppercase muted">DevOps & Infra</h3>
-            <span class="chip">AWS</span>
-            <span class="chip">CI/CD</span>
-            <span class="chip">Deployment</span>
-            <span class="chip">Agile Methodology</span>
-            <span class="chip">Performance Optimization</span>
+          <div class="tree-box">
+            <div class="tree-title">DevOps Tree</div>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Intermediate | AWS EC2 and S3 production usage">AWS</button>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Intermediate | Implemented deployment pipelines">CI/CD</button>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Intermediate | Performance and deployment workflow">Release Engineering</button>
+            <button class="skill-node" data-bs-toggle="tooltip" title="Advanced | Debugging and optimization">Performance Optimization</button>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="projects" class="fade-in" aria-labelledby="projects-title">
+    <section id="projects" class="section-shell fade-in" data-level="3">
+      <div class="level-tag">LEVEL 3 <span class="status">LOCKED</span></div>
       <div class="container">
-        <h2 id="projects-title" class="section-title">Projects</h2>
-        <p class="section-subtitle">Professional and personal projects from my resume, focused on full stack engineering and product delivery.</p>
-        <div class="row g-4">
-          <div class="col-md-6 col-xl-3">
-            <article class="glass-card project-card">
-              <h3>NASE Platform Dev Environment</h3>
-              <p class="muted">Designed and built REST APIs powering mobile apps and enterprise dashboards, and improved legacy backend response time from ~800ms to ~200ms.</p>
-              <div class="project-tags">
-                <span>CodeIgniter</span><span>AngularJS</span><span>Node.js</span><span>Stripe</span><span>AWS EC2</span><span>CI/CD</span>
-              </div>
-              <a class="project-link" href="http://54.164.191.20/nase/" target="_blank" rel="noopener noreferrer">
-                Live <i class="bi bi-arrow-up-right"></i>
-              </a>
-            </article>
-          </div>
-         <div class="col-md-6 col-xl-3">
-  <article class="glass-card project-card">
-    <h3>Car-Up Admin Platform</h3>
-    <p class="muted">
-      Developed an Angular-based admin dashboard for managing platform operations, payments, and analytics. Implemented Stripe payment integration, built interactive analytics dashboards using PrimeNG components, and designed secure file upload workflows using AWS S3 for scalable media storage.
-    </p>
-    <div class="project-tags">
-      <span>Angular</span>
-      <span>PrimeNG</span>
-      <span>Stripe</span>
-      <span>AWS S3</span>
-    </div>
-    <a class="project-link" href="https://admin.car-up.com/" target="_blank" rel="noopener noreferrer">
-      Live <i class="bi bi-arrow-up-right"></i>
-    </a>
-  </article>
-</div>
-          <div class="col-md-6 col-xl-3">
-            <article class="glass-card project-card">
-              <h3>PetPalz Pet Adoption Platform</h3>
-              <p class="muted">Engineered pet discovery and filtering modules, integrated Google Maps and subscription flows, and optimized UI/data-fetching performance.</p>
-              <div class="project-tags">
-                <span>React</span><span>Node.js</span><span>Google Maps</span><span>Stripe</span><span>OAuth</span>
-              </div>
-              <a class="project-link" href="https://petpalz.pet/" target="_blank" rel="noopener noreferrer">
-                Live <i class="bi bi-arrow-up-right"></i>
-              </a>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-3">
-            <article class="glass-card project-card">
-              <h3>Labor Gator Admin Platform</h3>
-              <p class="muted">Developed scalable Next.js admin dashboards with real-time messaging and notifications to improve service operations.</p>
-              <div class="project-tags">
-                <span>Next.js</span><span>Tailwind</span><span>Socket.IO</span>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-3">
-            <article class="glass-card project-card">
-              <h3>SecurePosit Admin Platform</h3>
-              <p class="muted">Built SSR-based admin panels with secure deposit and transaction modules for buyer-seller workflows.</p>
-              <div class="project-tags">
-                <span>Next.js</span><span>Tailwind</span><span>Stripe</span><span>Socket.IO</span>
-              </div>
-              <a class="project-link" href="https://admin.secureposit.com/" target="_blank" rel="noopener noreferrer">
-                Live <i class="bi bi-arrow-up-right"></i>
-              </a>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-3">
-            <article class="glass-card project-card">
-              <h3>LocalShop Finder</h3>
-              <p class="muted">Created a location-based shop discovery platform with Redis caching, UPI deep-link payments, and automated email billing.</p>
-              <div class="project-tags">
-                <span>Next.js</span><span>Supabase</span><span>Redis</span><span>Google Maps API</span><span>UPI</span>
-              </div>
-              <a class="project-link" href="https://localshopfinder.vercel.app/" target="_blank" rel="noopener noreferrer">
-                Live <i class="bi bi-arrow-up-right"></i>
-              </a>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-3">
-            <article class="glass-card project-card">
-              <h3>Build-X eCommerce Platform</h3>
-              <p class="muted">Developed a MERN-based eCommerce application with product listing, cart, checkout, and Redux state management.</p>
-              <div class="project-tags">
-                <span>MongoDB</span><span>Express</span><span>React</span><span>Node.js</span><span>Redux</span>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-3">
-            <article class="glass-card project-card">
-              <h3>ProjectMate Suite</h3>
-              <p class="muted">Contributed to frontend and backend features for construction-focused enterprise project management workflows.</p>
-              <div class="project-tags">
-                <span>Full Stack</span><span>Enterprise Apps</span><span>Project Management</span>
-              </div>
-              <a class="project-link" href="https://www.projectsmate.com/" target="_blank" rel="noopener noreferrer">
-                Live <i class="bi bi-arrow-up-right"></i>
-              </a>
-            </article>
-          </div>
-        </div>
-
-        <div class="row mt-4">
-          <div class="col-12">
-            <div class="glass-card p-3 p-md-4">
-              <h3 class="h5 mb-3">Latest GitHub Repositories</h3>
-              <div id="repoList" class="row g-3">
-                <div class="col-12 muted">Loading repositories...</div>
-              </div>
-            </div>
-          </div>
+        <h2 class="section-title">Level 3: Missions</h2>
+        <p class="section-subtitle">Each project is a mission card. Open Mission Details for problem, architecture, stack, and impact.</p>
+        <div class="row g-4" id="missionGrid">
+          <div class="col-md-6 col-xl-3"><article class="mission-card"><h3 class="h6">Mission: NASE Platform</h3><p class="muted">Designed REST APIs and reduced legacy response time from 800ms to 200ms.</p><div class="mission-tags"><span>CodeIgniter</span><span>AngularJS</span><span>Node.js</span><span>AWS EC2</span></div><div class="mt-3 d-flex gap-2"><a class="btn btn-sm btn-outline-light" href="http://54.164.191.20/nase/" target="_blank" rel="noopener noreferrer">Live</a><button class="btn btn-sm btn-brand mission-btn" data-name="NASE Platform Dev Environment" data-problem="Needed APIs and admin services to support mobile and enterprise flows." data-architecture="AngularJS frontend, Node.js and CodeIgniter backend modules, AWS EC2 hosting, CI/CD deployments." data-stack="CodeIgniter, AngularJS, Node.js, Stripe, AWS EC2, CI/CD" data-impact="Improved backend response time from ~800ms to ~200ms and increased release reliability.">Mission Details</button></div></article></div>
+          <div class="col-md-6 col-xl-3"><article class="mission-card"><h3 class="h6">Mission: Car-Up Admin</h3><p class="muted">Admin dashboard for operations, payments, analytics, and secure uploads.</p><div class="mission-tags"><span>Angular</span><span>PrimeNG</span><span>Stripe</span><span>AWS S3</span></div><div class="mt-3 d-flex gap-2"><a class="btn btn-sm btn-outline-light" href="https://admin.car-up.com/" target="_blank" rel="noopener noreferrer">Live</a><button class="btn btn-sm btn-brand mission-btn" data-name="Car-Up Admin Platform" data-problem="Admin dashboard required for managing vehicle service operations and payments." data-architecture="Angular frontend, service-oriented backend APIs, AWS S3 media storage, Stripe payment gateway integration." data-stack="Angular, PrimeNG, Stripe, AWS S3" data-impact="Improved admin workflow efficiency and provided live operational visibility.">Mission Details</button></div></article></div>
+          <div class="col-md-6 col-xl-3"><article class="mission-card"><h3 class="h6">Mission: PetPalz</h3><p class="muted">Pet discovery platform with location search and subscription flow.</p><div class="mission-tags"><span>React</span><span>Node.js</span><span>Google Maps</span><span>Stripe</span></div><div class="mt-3 d-flex gap-2"><a class="btn btn-sm btn-outline-light" href="https://petpalz.pet/" target="_blank" rel="noopener noreferrer">Live</a><button class="btn btn-sm btn-brand mission-btn" data-name="PetPalz Pet Adoption Platform" data-problem="Users needed better pet discovery, filtering, and location-based recommendations." data-architecture="React frontend, Node.js APIs, Google Maps integration, auth and payment services." data-stack="React, Node.js, Google Maps, Stripe, OAuth" data-impact="Improved search responsiveness and enabled smooth adoption subscription workflows.">Mission Details</button></div></article></div>
+          <div class="col-md-6 col-xl-3"><article class="mission-card"><h3 class="h6">Mission: Labor Gator</h3><p class="muted">Real-time admin workflows for bookings, chat, and notifications.</p><div class="mission-tags"><span>Next.js</span><span>Tailwind</span><span>Socket.IO</span></div><div class="mt-3 d-flex gap-2"><button class="btn btn-sm btn-brand mission-btn" data-name="Labor Gator Admin Platform" data-problem="Needed operational tooling for service-provider management and communication." data-architecture="Next.js admin frontend with Socket.IO based event-driven messaging." data-stack="Next.js, Tailwind, Socket.IO" data-impact="Faster communication between users and contractors with improved operational throughput.">Mission Details</button></div></article></div>
+          <div class="col-md-6 col-xl-3"><article class="mission-card"><h3 class="h6">Mission: SecurePosit</h3><p class="muted">Secure deposit and transaction management for buyer-seller flows.</p><div class="mission-tags"><span>Next.js</span><span>Tailwind</span><span>Stripe</span><span>Socket.IO</span></div><div class="mt-3 d-flex gap-2"><a class="btn btn-sm btn-outline-light" href="https://admin.secureposit.com/" target="_blank" rel="noopener noreferrer">Live</a><button class="btn btn-sm btn-brand mission-btn" data-name="SecurePosit Admin Platform" data-problem="Required trusted payment flow and transaction admin control for secure deposits." data-architecture="Next.js SSR admin panel, payment and transaction modules, event updates with Socket.IO." data-stack="Next.js, Tailwind, Stripe, Socket.IO" data-impact="Enabled safer buyer-seller transactions and improved dashboard load performance.">Mission Details</button></div></article></div>
+          <div class="col-md-6 col-xl-3"><article class="mission-card"><h3 class="h6">Mission: LocalShop Finder</h3><p class="muted">Location-based discovery platform with UPI and caching.</p><div class="mission-tags"><span>Next.js</span><span>Supabase</span><span>Redis</span><span>UPI</span></div><div class="mt-3 d-flex gap-2"><a class="btn btn-sm btn-outline-light" href="https://localshopfinder.vercel.app/" target="_blank" rel="noopener noreferrer">Live</a><button class="btn btn-sm btn-brand mission-btn" data-name="LocalShop Finder" data-problem="Needed hyperlocal shop discovery with optimized map usage and direct payments." data-architecture="Next.js frontend, Supabase backend, Redis caching, Google Maps API integration." data-stack="Next.js, Supabase, Redis, Google Maps API, UPI Payments" data-impact="Reduced map API overhead and enabled seamless merchant billing workflow.">Mission Details</button></div></article></div>
+          <div class="col-md-6 col-xl-3"><article class="mission-card"><h3 class="h6">Mission: Build-X</h3><p class="muted">MERN eCommerce with cart, checkout, and Redux state architecture.</p><div class="mission-tags"><span>MongoDB</span><span>Express</span><span>React</span><span>Node</span></div><div class="mt-3 d-flex gap-2"><button class="btn btn-sm btn-brand mission-btn" data-name="Build-X eCommerce Platform" data-problem="Needed scalable storefront with robust cart and checkout process." data-architecture="React frontend with Redux state layer and Node/Express API over MongoDB." data-stack="MongoDB, Express, React, Node.js, Redux" data-impact="Delivered complete eCommerce flow and reusable API-driven architecture.">Mission Details</button></div></article></div>
+          <div class="col-md-6 col-xl-3"><article class="mission-card"><h3 class="h6">Mission: ProjectMate</h3><p class="muted">Enterprise construction project workflows across frontend and backend.</p><div class="mission-tags"><span>Full Stack</span><span>Enterprise</span><span>Ops</span></div><div class="mt-3 d-flex gap-2"><a class="btn btn-sm btn-outline-light" href="https://www.projectsmate.com/" target="_blank" rel="noopener noreferrer">Live</a><button class="btn btn-sm btn-brand mission-btn" data-name="ProjectMate Suite" data-problem="Construction teams needed structured digital workflows for project coordination." data-architecture="Enterprise full-stack modules for project management and collaboration." data-stack="Full Stack Web App, Enterprise Modules" data-impact="Improved project visibility and standardized management workflows.">Mission Details</button></div></article></div>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="fade-in" aria-labelledby="experience-title">
+    <section id="experience" class="section-shell fade-in" data-level="4">
+      <div class="level-tag">LEVEL 4 <span class="status">LOCKED</span></div>
       <div class="container">
-        <h2 id="experience-title" class="section-title">Experience</h2>
-        <p class="section-subtitle">Professional timeline aligned with resume data.</p>
-        <div class="glass-card p-3 p-md-4">
-          <div class="timeline">
-            <article class="timeline-item">
-              <h3 class="h5 mb-1">Software Engineer | NewAgeSys Solutions India</h3>
-              <p class="muted mb-2">Jul 2022 - Feb 2026</p>
-              <p class="mb-0 muted">
-                Developed scalable applications using React.js and Next.js, built REST APIs and backend services with Node.js and CodeIgniter,
-                created admin dashboards for multiple products, resolved production issues, optimized performance, and implemented CI/CD workflows.
-              </p>
-            </article>
-            <article class="timeline-item">
-              <h3 class="h6 mb-1">Full Stack Developer Intern | TGH Tech India</h3>
-              <p class="muted mb-2">Oct 2021 - Apr 2022</p>
-              <p class="mb-0 muted">
-                Worked on ProjectMate Suite for the construction industry and contributed to frontend and backend development
-                of enterprise project management applications.
-              </p>
-            </article>
-          </div>
+        <h2 class="section-title">Level 4: Career Progression Map</h2>
+        <p class="section-subtitle">From internship to Software Engineer with measurable engineering impact.</p>
+        <div class="map-grid">
+          <article class="map-node"><div class="node-level">LEVEL 1</div><h3 class="h6">Full Stack Developer Intern</h3><p class="muted">TGH Tech India | Oct 2021 - Apr 2022</p><ul><li>Contributed to ProjectMate Suite for construction workflows.</li><li>Built frontend and backend modules for enterprise usage.</li></ul></article>
+          <article class="map-node"><div class="node-level">LEVEL 5</div><h3 class="h6">Full Stack Developer</h3><p class="muted">NewAgeSys Solutions India | 2022 - 2024</p><ul><li>Built scalable REST APIs and dashboard modules.</li><li>Delivered React and Next.js apps in production.</li><li>Designed admin workflows and analytics interfaces.</li></ul></article>
+          <article class="map-node"><div class="node-level">LEVEL 10</div><h3 class="h6">Software Engineer</h3><p class="muted">NewAgeSys Solutions India | Jul 2022 - Feb 2026</p><ul><li>Reduced API response time from 800ms to 200ms.</li><li>Built scalable REST APIs and backend services.</li><li>Implemented CI/CD pipelines for release stability.</li><li>Designed multi-product admin dashboards.</li></ul></article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="fade-in" aria-labelledby="contact-title">
+    <section id="github-quests" class="section-shell fade-in" data-level="4">
+      <div class="level-tag">SIDE QUESTS <span class="status">LOCKED</span></div>
       <div class="container">
-        <h2 id="contact-title" class="section-title">Contact</h2>
-        <p class="section-subtitle">Available for software engineering opportunities and product-focused full stack roles.</p>
+        <h2 class="section-title">Open Source Side Quests</h2>
+        <p class="section-subtitle">GitHub integration with stats, contribution heatmap, top languages, and recent repositories.</p>
+        <div class="quest-grid mb-3">
+          <div class="quest-card"><div class="v" id="qRepos">--</div><div class="k">Public Repositories</div></div>
+          <div class="quest-card"><div class="v" id="qStars">--</div><div class="k">Total Stars</div></div>
+          <div class="quest-card"><div class="v" id="qCommits">--</div><div class="k">Total Commits (Recent)</div></div>
+          <div class="quest-card"><div class="v" id="qLang">--</div><div class="k">Most Used Languages</div></div>
+        </div>
         <div class="row g-3">
-          <div class="col-md-3">
-            <div class="glass-card contact-card">
-              <h3 class="h6">Email</h3>
-              <p class="mb-0"><a href="mailto:muhammedrameez2000@gmail.com">muhammedrameez2000@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="glass-card contact-card">
-              <h3 class="h6">Phone</h3>
-              <p class="mb-0"><a href="tel:+917907858474">+91 7907 858 474</a></p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="glass-card contact-card">
-              <h3 class="h6">LinkedIn</h3>
-              <p class="mb-0">
-                <a href="https://www.linkedin.com/in/mhmdrameeznettoor/" target="_blank" rel="noopener noreferrer">
-                  linkedin.com/in/mhmdrameeznettoor
-                </a>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="glass-card contact-card">
-              <h3 class="h6">GitHub</h3>
-              <p class="mb-0">
-                <a href="https://github.com/mhmdrameez" target="_blank" rel="noopener noreferrer">
-                  github.com/mhmdrameez
-                </a>
-              </p>
-            </div>
-          </div>
+          <div class="col-lg-7"><img class="contrib-img" id="contribImg" loading="lazy" alt="GitHub contribution heatmap"></div>
+          <div class="col-lg-5"><div class="glass p-3 h-100"><h3 class="h6 mb-3">Recent Repositories</h3><div id="repoList"><p class="muted mb-0">Loading recent repositories...</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-shell fade-in" data-level="5">
+      <div class="level-tag">LEVEL 5 <span class="status">LOCKED</span></div>
+      <div class="container">
+        <h2 class="section-title">Level 5: Contact</h2>
+        <p class="section-subtitle">Ready for software engineering roles and recruiter conversations.</p>
+        <div class="row g-3">
+          <div class="col-md-3"><div class="glass contact-card"><h3 class="h6">Email</h3><p class="mb-0"><a href="mailto:muhammedrameez2000@gmail.com">muhammedrameez2000@gmail.com</a></p></div></div>
+          <div class="col-md-3"><div class="glass contact-card"><h3 class="h6">Phone</h3><p class="mb-0"><a href="tel:+917907858474">+91 7907 858 474</a></p></div></div>
+          <div class="col-md-3"><div class="glass contact-card"><h3 class="h6">LinkedIn</h3><p class="mb-0"><a href="https://www.linkedin.com/in/mhmdrameeznettoor/" target="_blank" rel="noopener noreferrer">linkedin.com/in/mhmdrameeznettoor</a></p></div></div>
+          <div class="col-md-3"><div class="glass contact-card"><h3 class="h6">GitHub</h3><p class="mb-0"><a href="https://github.com/mhmdrameez" target="_blank" rel="noopener noreferrer">github.com/mhmdrameez</a></p></div></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container d-flex justify-content-between flex-wrap gap-2">
+  <footer class="py-4 border-top" style="border-color: var(--border) !important;">
+    <div class="container text-muted d-flex justify-content-between flex-wrap gap-2">
       <span>&copy; <span id="year"></span> Muhammed Rameez</span>
+      <span>Game-Inspired Developer Portfolio</span>
     </div>
   </footer>
 
+  <div class="modal fade" id="missionModal" tabindex="-1" aria-labelledby="missionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5 mb-0" id="missionModalLabel">Mission Details</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h3 class="h6">Problem</h3><p id="missionProblem" class="muted"></p>
+          <h3 class="h6">Architecture</h3><p id="missionArchitecture" class="muted"></p>
+          <h3 class="h6">Tech Stack</h3><p id="missionStack" class="muted"></p>
+          <h3 class="h6">Impact</h3><p id="missionImpact" class="muted mb-0"></p>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    (() => {
+      const year = document.getElementById("year");
+      if (year) year.textContent = new Date().getFullYear();
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
-
-    async function loadGitHubProfile() {
-      const user = "mhmdrameez";
-      const followersEl = document.getElementById("ghFollowers");
-      const reposEl = document.getElementById("ghRepos");
-      const starsEl = document.getElementById("ghStars");
-      const statusEl = document.getElementById("ghStatus");
-      const repoListEl = document.getElementById("repoList");
-
-      try {
-        const [profileRes, reposRes] = await Promise.all([
-          fetch(`https://api.github.com/users/${user}`),
-          fetch(`https://api.github.com/users/${user}/repos?sort=updated&per_page=100`)
-        ]);
-
-        if (!profileRes.ok || !reposRes.ok) {
-          throw new Error("GitHub API request failed.");
-        }
-
-        const profile = await profileRes.json();
-        const repos = await reposRes.json();
-
-        const totalStars = repos.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0);
-        const latestRepos = repos.slice(0, 4);
-
-        followersEl.textContent = profile.followers ?? "--";
-        reposEl.textContent = profile.public_repos ?? "--";
-        starsEl.textContent = totalStars;
-        statusEl.textContent = "Live data from GitHub API";
-
-        repoListEl.innerHTML = latestRepos.map((repo) => `
-          <div class="col-md-6">
-            <article class="glass-card p-3 h-100">
-              <h4 class="h6 mb-1">${repo.name}</h4>
-              <p class="muted small mb-2">${repo.description ? repo.description : "No description provided."}</p>
-              <a class="small text-info text-decoration-none" href="${repo.html_url}" target="_blank" rel="noopener noreferrer">
-                View Repository <i class="bi bi-arrow-up-right"></i>
-              </a>
-            </article>
-          </div>
-        `).join("");
-      } catch (error) {
-        statusEl.textContent = "GitHub data unavailable right now.";
-        repoListEl.innerHTML = '<div class="col-12 muted">Unable to load repositories at the moment.</div>';
+      const roles = ["Full Stack Developer", "React Engineer", "Node.js Architect"];
+      const typingEl = document.getElementById("typingRole");
+      let roleIndex = 0, charIndex = 0, deleting = false;
+      function typeLoop() {
+        if (!typingEl) return;
+        const current = roles[roleIndex];
+        typingEl.textContent = deleting ? current.slice(0, charIndex--) : current.slice(0, charIndex++);
+        if (!deleting && charIndex > current.length) { deleting = true; setTimeout(typeLoop, 1000); return; }
+        if (deleting && charIndex < 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; charIndex = 0; }
+        setTimeout(typeLoop, deleting ? 40 : 85);
       }
-    }
+      typeLoop();
 
-    loadGitHubProfile();
+      const revealItems = document.querySelectorAll(".fade-in");
+      const levelSections = [...document.querySelectorAll(".section-shell[data-level]")];
+      const journeyBar = document.getElementById("journeyBar");
+      const progressText = document.getElementById("progressText");
+      function updateProgress() {
+        const unlocked = levelSections.filter((s) => s.classList.contains("unlocked")).length;
+        const pct = Math.round((unlocked / levelSections.length) * 100);
+        if (journeyBar) journeyBar.style.width = `${pct}%`;
+        if (progressText) progressText.textContent = `${pct}%`;
+      }
+      const unlockObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("visible", "unlocked");
+          const status = entry.target.querySelector(".level-tag .status");
+          if (status) status.textContent = "UNLOCKED";
+          updateProgress();
+          unlockObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.2 });
+      revealItems.forEach((el) => unlockObserver.observe(el));
+      updateProgress();
 
-    // Strict no-navigation download behavior.
-    const resumeBtn = document.getElementById("downloadResumeBtn");
-    if (resumeBtn) {
-      resumeBtn.addEventListener("click", async () => {
-        const resumePath = "assets/Muhammed_Rameez.pdf";
-        const fileName = "Muhammed_Rameez_Resume.pdf";
+      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => new bootstrap.Tooltip(el));
 
-        if (window.location.protocol === "file:") {
-          alert("Download without page change requires running this page on localhost (http://), not file://.");
-          return;
-        }
+      const missionModalEl = document.getElementById("missionModal");
+      const missionModal = missionModalEl ? new bootstrap.Modal(missionModalEl) : null;
+      document.querySelectorAll(".mission-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.getElementById("missionModalLabel").textContent = `Mission: ${btn.dataset.name || "Details"}`;
+          document.getElementById("missionProblem").textContent = btn.dataset.problem || "";
+          document.getElementById("missionArchitecture").textContent = btn.dataset.architecture || "";
+          document.getElementById("missionStack").textContent = btn.dataset.stack || "";
+          document.getElementById("missionImpact").textContent = btn.dataset.impact || "";
+          if (missionModal) missionModal.show();
+        });
+      });
+
+      async function loadGitHub() {
+        const user = "mhmdrameez";
+        const qRepos = document.getElementById("qRepos");
+        const qStars = document.getElementById("qStars");
+        const qCommits = document.getElementById("qCommits");
+        const qLang = document.getElementById("qLang");
+        const xpRepos = document.getElementById("xpRepos");
+        const repoList = document.getElementById("repoList");
+        const contrib = document.getElementById("contribImg");
+        if (contrib) contrib.src = `https://ghchart.rshah.org/22d3ee/${user}`;
 
         try {
-          const response = await fetch(resumePath, { cache: "no-store" });
-          if (!response.ok) throw new Error("Resume download failed.");
-          const pdfBlob = await response.blob();
-          const blobUrl = URL.createObjectURL(pdfBlob);
+          const [profileRes, reposRes, eventsRes] = await Promise.all([
+            fetch(`https://api.github.com/users/${user}`),
+            fetch(`https://api.github.com/users/${user}/repos?sort=updated&per_page=100`),
+            fetch(`https://api.github.com/users/${user}/events/public?per_page=100`)
+          ]);
+          if (!profileRes.ok || !reposRes.ok) throw new Error("GitHub data fetch failed");
 
-          const tempLink = document.createElement("a");
-          tempLink.href = blobUrl;
-          tempLink.download = fileName;
-          tempLink.style.display = "none";
-          document.body.appendChild(tempLink);
-          tempLink.click();
-          tempLink.remove();
-          URL.revokeObjectURL(blobUrl);
+          const profile = await profileRes.json();
+          const repos = await reposRes.json();
+          const events = eventsRes.ok ? await eventsRes.json() : [];
+          const stars = repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
+          const languages = {};
+          repos.forEach((r) => { if (r.language) languages[r.language] = (languages[r.language] || 0) + 1; });
+          const topLangs = Object.entries(languages).sort((a,b) => b[1]-a[1]).slice(0,3).map(([k]) => k).join(", ");
+          const commits = events.filter((e) => e.type === "PushEvent").reduce((sum, e) => sum + ((e.payload && e.payload.size) ? e.payload.size : 0), 0);
+
+          if (qRepos) qRepos.textContent = profile.public_repos ?? "--";
+          if (qStars) qStars.textContent = stars;
+          if (qCommits) qCommits.textContent = commits || "--";
+          if (qLang) qLang.textContent = topLangs || "--";
+          if (xpRepos) xpRepos.textContent = profile.public_repos ?? "--";
+
+          const recent = repos.slice(0, 5);
+          if (repoList) {
+            repoList.innerHTML = recent.map((r) => `
+              <div class="mb-2">
+                <a class="text-info text-decoration-none" href="${r.html_url}" target="_blank" rel="noopener noreferrer">${r.name}</a>
+                <div class="small muted">${r.description ? r.description : "No description provided."}</div>
+              </div>
+            `).join("");
+          }
         } catch (error) {
-          console.error("Resume download failed:", error);
+          if (repoList) repoList.innerHTML = '<p class="muted mb-0">GitHub data unavailable right now.</p>';
+          console.error(error);
         }
-      });
-    }
+      }
+      loadGitHub();
+
+      const resumeBtn = document.getElementById("downloadResumeBtn");
+      if (resumeBtn) {
+        resumeBtn.addEventListener("click", async () => {
+          const resumePath = "assets/Muhammed_Rameez.pdf";
+          const fileName = "Muhammed_Rameez_Resume.pdf";
+          if (window.location.protocol === "file:") {
+            alert("For direct download, run this page on localhost (http://), not file://.");
+            return;
+          }
+          try {
+            const response = await fetch(resumePath, { cache: "no-store" });
+            if (!response.ok) throw new Error("Resume download failed");
+            const blob = await response.blob();
+            const blobUrl = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = blobUrl;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(blobUrl);
+          } catch (error) {
+            console.error(error);
+          }
+        });
+      }
+
+      let rafId = null;
+      window.addEventListener("scroll", () => {
+        if (rafId) return;
+        rafId = requestAnimationFrame(() => {
+          const y = window.scrollY * 0.04;
+          document.querySelectorAll(".floating-icon").forEach((icon, i) => {
+            icon.style.transform = `translateY(${(i + 1) * y * -0.08}px)`;
+          });
+          rafId = null;
+        });
+      }, { passive: true });
+    })();
   </script>
 </body>
 </html>
