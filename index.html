@@ -7,21 +7,64 @@
   <meta name="description" content="Game-inspired interactive portfolio of Muhammed Rameez, Full Stack Developer with 3.7+ years of experience.">
   <meta name="keywords" content="Muhammed Rameez, Full Stack Developer, React, Next.js, Node.js, Portfolio, Software Engineer">
   <meta name="author" content="Muhammed Rameez">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#050913">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Muhammed Rameez | Interactive Developer Portfolio">
   <meta property="og:description" content="Explore skill tree, project missions, career map, and open-source side quests.">
   <meta property="og:url" content="https://mhmdrameez.github.io/">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/31467986?v=4">
+  <meta property="og:site_name" content="Muhammed Rameez Portfolio">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Muhammed Rameez | Interactive Developer Portfolio">
+  <meta name="twitter:description" content="Full Stack Developer portfolio with projects, experience, and open-source work.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/31467986?v=4">
   <link rel="canonical" href="https://mhmdrameez.github.io/">
-  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="icon" href="assets/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="dns-prefetch" href="//api.github.com">
+  <link rel="dns-prefetch" href="//ghchart.rshah.org">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-
+  <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Muhammed Rameez",
+      "url": "https://mhmdrameez.github.io/",
+      "jobTitle": "Software Engineer",
+      "sameAs": [
+        "https://github.com/mhmdrameez",
+        "https://www.linkedin.com/in/mhmdrameeznettoor/"
+      ],
+      "knowsAbout": [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "REST APIs",
+        "AWS",
+        "CI/CD"
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Muhammed Rameez Portfolio",
+      "url": "https://mhmdrameez.github.io/"
+    }
+  </script>
 
   <style>
     :root { --bg:#070d16; --surface:rgba(255,255,255,.05); --text:#e8edf8; --muted:#9aa8c5; --brand:#22d3ee; --brand2:#3b82f6; --border:rgba(154,168,197,.25); --shadow:0 20px 50px rgba(2,8,20,.55); }
@@ -38,6 +81,7 @@
     .progress-bar { background:linear-gradient(90deg,#22d3ee,#3b82f6); box-shadow:0 0 14px rgba(34,211,238,.45); }
     section { padding:96px 0; position:relative; }
     .section-shell { position:relative; }
+    .section-shell:not(.hero) { content-visibility:auto; contain-intrinsic-size: 1px 800px; }
     .level-tag { position:absolute; right:.5rem; top:-.35rem; padding:.28rem .6rem; border-radius:999px; border:1px solid var(--border); background:rgba(10,18,33,.9); font-size:.72rem; }
     .level-tag .status { color:#fca5a5; font-weight:700; }
     .section-shell.unlocked .level-tag { border-color:rgba(52,211,153,.5); background:rgba(6,28,24,.92); }
@@ -92,6 +136,7 @@
     .modal-content { background:#0b1426; border:1px solid var(--border); color:var(--text); }
     .modal-header,.modal-footer { border-color:var(--border); }
     .muted { color:var(--muted); }
+    @media (prefers-reduced-motion: reduce) { html{scroll-behavior:auto;} .fade-in,.floating-icon,.code-line{animation:none !important; transition:none !important;} }
     @media (max-width:991.98px) { .journey-hud{top:57px;} .hero{min-height:auto; padding-top:132px;} .skill-tree,.map-grid{grid-template-columns:1fr;} .quest-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
   </style>
 </head>
@@ -249,7 +294,7 @@
           <div class="quest-card"><div class="v" id="qLang">--</div><div class="k">Most Used Languages</div></div>
         </div>
         <div class="row g-3">
-          <div class="col-lg-7"><img class="contrib-img" id="contribImg" loading="lazy" alt="GitHub contribution heatmap"></div>
+          <div class="col-lg-7"><img class="contrib-img" id="contribImg" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="220" alt="GitHub contribution heatmap"></div>
           <div class="col-lg-5"><div class="glass p-3 h-100"><h3 class="h6 mb-3">Recent Repositories</h3><div id="repoList"><p class="muted mb-0">Loading recent repositories...</p></div></div></div>
         </div>
       </div>
@@ -310,7 +355,14 @@
         if (deleting && charIndex < 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; charIndex = 0; }
         setTimeout(typeLoop, deleting ? 40 : 85);
       }
-      typeLoop();
+      const runWhenIdle = (fn) => {
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(fn, { timeout: 1200 });
+        } else {
+          setTimeout(fn, 0);
+        }
+      };
+      runWhenIdle(typeLoop);
 
       const revealItems = document.querySelectorAll(".fade-in");
       const levelSections = [...document.querySelectorAll(".section-shell[data-level]")];
@@ -335,7 +387,9 @@
       revealItems.forEach((el) => unlockObserver.observe(el));
       updateProgress();
 
-      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => new bootstrap.Tooltip(el));
+      runWhenIdle(() => {
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => new bootstrap.Tooltip(el));
+      });
 
       const missionModalEl = document.getElementById("missionModal");
       const missionModal = missionModalEl ? new bootstrap.Modal(missionModalEl) : null;
@@ -398,7 +452,25 @@
           console.error(error);
         }
       }
-      loadGitHub();
+      let githubLoaded = false;
+      const startGitHubLoad = () => {
+        if (githubLoaded) return;
+        githubLoaded = true;
+        loadGitHub();
+      };
+      const githubSection = document.getElementById("github-quests");
+      if ("IntersectionObserver" in window && githubSection) {
+        const githubObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            startGitHubLoad();
+            githubObserver.disconnect();
+          });
+        }, { rootMargin: "180px 0px" });
+        githubObserver.observe(githubSection);
+      } else {
+        runWhenIdle(startGitHubLoad);
+      }
 
       const resumeBtn = document.getElementById("downloadResumeBtn");
       if (resumeBtn) {
@@ -427,12 +499,13 @@
         });
       }
 
+      const floatingIcons = [...document.querySelectorAll(".floating-icon")];
       let rafId = null;
       window.addEventListener("scroll", () => {
         if (rafId) return;
         rafId = requestAnimationFrame(() => {
           const y = window.scrollY * 0.04;
-          document.querySelectorAll(".floating-icon").forEach((icon, i) => {
+          floatingIcons.forEach((icon, i) => {
             icon.style.transform = `translateY(${(i + 1) * y * -0.08}px)`;
           });
           rafId = null;

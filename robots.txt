@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /insidejs/
+
+Sitemap: https://mhmdrameez.github.io/sitemap.xml
